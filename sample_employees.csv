@@ -1,0 +1,6 @@
+name,email,department,doj,newDesignation,newSalary,effectiveDate,letterType
+John Doe,john.doe@example.com,Engineering,7/15/2022,Senior Developer,85000,8/1/2025,promotion
+Jane Smith,jane.smith@example.com,Finance,5/10/2021,,90000,8/15/2025,appraisal
+Rahul Verma,rahul.verma@example.com,Marketing,3/1/2020,Team Lead,95000,8/1/2025,promotion
+Neha Mehta,shubhbohra44@gmail.com,Sales,11/20/2019,,87000,9/1/2025,appraisal
+randdom,ccshubhbo3@gmail.com,trade,11/20/2019,consultant,95000,9/1/2025,promotion

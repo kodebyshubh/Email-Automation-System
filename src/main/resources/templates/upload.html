@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload CSV</title>
+    <style>
+        body, h2, p, form {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe 0%, #f0eaff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+            max-width: 420px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #3b82f6;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        input[type="file"] {
+            padding: 0.45rem;
+            background: #f5f5fb;
+            border: 1px solid #c7d2fe;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #444;
+            font-size: 1rem;
+        }
+
+        button[type="submit"] {
+            background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.8rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-bottom: 0.5rem;
+        }
+
+        button[type="submit"]:hover {
+            background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+        }
+
+        .message {
+            text-align: center;
+            color: #16a34a;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.3rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Upload Employee CSV</h2>
+    <form method="post" enctype="multipart/form-data" action="/upload">
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Upload and Send Emails</button>
+    </form>
+    <p class="message" th:text="${message}"></p>
+</div>
+</body>
+</html>
